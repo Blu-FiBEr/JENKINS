@@ -1,6 +1,9 @@
-import math
-def isSqr(number):    
-    root = math.sqrt(number)
-    if int(root + 0.5) ** 2 == number:
-        return 1
-    return 0
+#!/usr/bin/python3
+
+def isSqr(n):    
+    i = 1
+    while(i * i<= n):    
+        if ((n % i == 0) and (n / i == i)):
+            return True    
+        i = i + 1
+    return False
